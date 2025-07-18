@@ -1,0 +1,90 @@
+/* Base styles for task item */
+.task-item {
+  background: var(--card-bg, #ffffff);
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid var(--border, #e2e8f0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Strike-through and fade for completed tasks */
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #6b7280;
+  opacity: 0.7;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+/* Highlighted search terms */
+.task-title mark {
+  background-color: #fef08a;
+  color: #92400e;
+  padding: 0 2px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* Task title */
+.task-title {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+/* Action buttons */
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.task-actions button:hover {
+  transform: scale(1.1);
+}
+
+/* Priority badge */
+.priority-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.priority-high {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority-medium {
+  background-color: #fef9c3;
+  color: #92400e;
+}
+
+.priority-low {
+  background-color: #dcfce7;
+  color: #065f46;
+}
+
+/* Due date badge */
+.due-date-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
